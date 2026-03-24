@@ -36,4 +36,12 @@ RSpec.describe Legion::Extensions::Cloudflare do
   it 'defines the Ai sub-module' do
     expect(described_class.const_defined?(:Ai)).to be true
   end
+
+  it 'defines the Zones sub-module' do
+    expect(described_class.const_defined?(:Zones)).to be true
+  end
+
+  it 'defines the Accounts sub-module' do
+    expect(described_class.const_defined?(:Accounts)).to be true
+  end
 end
