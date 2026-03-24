@@ -6,7 +6,7 @@ module Legion
       module DnsFirewall
         module Runners
           module Analytics
-            extend Legion::Extensions::Cloudflare::DnsFirewall::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def report(account_id:, dns_firewall_id:, **)
               response = client(**).get("/accounts/#{account_id}/dns_firewall/#{dns_firewall_id}/dns_analytics/report")

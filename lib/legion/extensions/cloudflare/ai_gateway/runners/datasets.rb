@@ -6,7 +6,7 @@ module Legion
       module AiGateway
         module Runners
           module Datasets
-            extend Legion::Extensions::Cloudflare::AiGateway::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_datasets(account_id:, gateway_id:, page: nil, per_page: nil, search: nil, **)
               params = { page: page, per_page: per_page, search: search }.compact

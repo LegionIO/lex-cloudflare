@@ -6,7 +6,7 @@ module Legion
       module Ai
         module Runners
           module Models
-            extend Legion::Extensions::Cloudflare::Ai::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def run(account_id:, model_name:, body:, **)
               response = client(**).post("/accounts/#{account_id}/ai/run/#{model_name}", body)

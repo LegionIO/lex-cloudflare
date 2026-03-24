@@ -6,7 +6,7 @@ module Legion
       module Dns
         module Runners
           module Records
-            extend Legion::Extensions::Cloudflare::Dns::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list(zone_id:, type: nil, name: nil, page: nil, per_page: nil, **)
               params = { type: type, name: name, page: page, per_page: per_page }.compact

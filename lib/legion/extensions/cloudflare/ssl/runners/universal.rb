@@ -6,7 +6,7 @@ module Legion
       module Ssl
         module Runners
           module Universal
-            extend Legion::Extensions::Cloudflare::Ssl::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def get_universal_settings(zone_id:, **)
               response = client(**).get("/zones/#{zone_id}/ssl/universal/settings")

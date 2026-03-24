@@ -6,7 +6,7 @@ module Legion
       module ZeroTrust
         module Runners
           module IpProfiles
-            extend Legion::Extensions::Cloudflare::ZeroTrust::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_ip_profiles(account_id:, per_page: nil, **)
               params = { per_page: per_page }.compact

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'legion/extensions/cloudflare/zero_trust/helpers/client'
 require 'legion/extensions/cloudflare/zero_trust/runners/devices'
 require 'legion/extensions/cloudflare/zero_trust/runners/registrations'
 require 'legion/extensions/cloudflare/zero_trust/runners/dex_tests'

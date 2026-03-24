@@ -6,7 +6,7 @@ module Legion
       module Ai
         module Runners
           module Finetunes
-            extend Legion::Extensions::Cloudflare::Ai::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_finetunes(account_id:, **)
               response = client(**).get("/accounts/#{account_id}/ai/finetunes")

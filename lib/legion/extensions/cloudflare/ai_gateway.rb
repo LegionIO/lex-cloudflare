@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'legion/extensions/cloudflare/ai_gateway/helpers/client'
 require 'legion/extensions/cloudflare/ai_gateway/runners/gateways'
 require 'legion/extensions/cloudflare/ai_gateway/runners/logs'
 require 'legion/extensions/cloudflare/ai_gateway/runners/datasets'

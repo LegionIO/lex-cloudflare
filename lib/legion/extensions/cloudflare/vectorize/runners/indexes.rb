@@ -6,7 +6,7 @@ module Legion
       module Vectorize
         module Runners
           module Indexes
-            extend Legion::Extensions::Cloudflare::Vectorize::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_indexes(account_id:, **)
               response = client(**).get("/accounts/#{account_id}/vectorize/v2/indexes")

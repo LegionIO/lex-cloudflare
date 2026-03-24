@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'legion/extensions/cloudflare/dns/helpers/client'
 require 'legion/extensions/cloudflare/dns/runners/records'
 require 'legion/extensions/cloudflare/dns/runners/dnssec'
 require 'legion/extensions/cloudflare/dns/client'

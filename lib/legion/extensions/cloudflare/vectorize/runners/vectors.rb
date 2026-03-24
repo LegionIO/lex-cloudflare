@@ -6,7 +6,7 @@ module Legion
       module Vectorize
         module Runners
           module Vectors
-            extend Legion::Extensions::Cloudflare::Vectorize::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def insert(account_id:, index_name:, body:, **)
               response = client(**).post("/accounts/#{account_id}/vectorize/v2/indexes/#{index_name}/insert", body)

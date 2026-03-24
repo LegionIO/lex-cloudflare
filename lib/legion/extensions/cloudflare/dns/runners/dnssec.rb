@@ -6,7 +6,7 @@ module Legion
       module Dns
         module Runners
           module Dnssec
-            extend Legion::Extensions::Cloudflare::Dns::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def get_dnssec(zone_id:, **)
               response = client(**).get("/zones/#{zone_id}/dnssec")

@@ -6,7 +6,7 @@ module Legion
       module ZeroTrust
         module Runners
           module DexTests
-            extend Legion::Extensions::Cloudflare::ZeroTrust::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_dex_tests(account_id:, page: nil, per_page: nil, **)
               params = { page: page, per_page: per_page }.compact

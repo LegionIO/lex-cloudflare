@@ -6,7 +6,7 @@ module Legion
       module DnsFirewall
         module Runners
           module Clusters
-            extend Legion::Extensions::Cloudflare::DnsFirewall::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list(account_id:, page: nil, per_page: nil, **)
               params = { page: page, per_page: per_page }.compact

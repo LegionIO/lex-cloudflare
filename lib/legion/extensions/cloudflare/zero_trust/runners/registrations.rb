@@ -6,7 +6,7 @@ module Legion
       module ZeroTrust
         module Runners
           module Registrations
-            extend Legion::Extensions::Cloudflare::ZeroTrust::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_registrations(account_id:, per_page: nil, search: nil, **)
               params = { per_page: per_page, search: search }.compact

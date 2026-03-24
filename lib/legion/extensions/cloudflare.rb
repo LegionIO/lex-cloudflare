@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'cloudflare/version'
+require_relative 'cloudflare/helpers/client'
+require_relative 'cloudflare/base_client'
 require_relative 'cloudflare/dns'
 require_relative 'cloudflare/dns_firewall'
 require_relative 'cloudflare/custom_nameservers'

@@ -6,7 +6,7 @@ module Legion
       module AiGateway
         module Runners
           module Evaluations
-            extend Legion::Extensions::Cloudflare::AiGateway::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list_evaluations(account_id:, gateway_id:, page: nil, per_page: nil, **)
               params = { page: page, per_page: per_page }.compact

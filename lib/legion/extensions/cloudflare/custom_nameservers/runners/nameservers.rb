@@ -6,7 +6,7 @@ module Legion
       module CustomNameservers
         module Runners
           module Nameservers
-            extend Legion::Extensions::Cloudflare::CustomNameservers::Helpers::Client
+            extend Legion::Extensions::Cloudflare::Helpers::Client
 
             def list(account_id:, **)
               response = client(**).get("/accounts/#{account_id}/custom_ns")
