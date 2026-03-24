@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-03-24
+
+### Added
+- WorkersRoutes sub-module: zone-scoped Workers route CRUD (list, get, create, update, delete)
+- Pages sub-module: account-scoped Pages projects, deployments (retry/rollback), and custom domains
+- 32 new specs covering all WorkersRoutes and Pages runners and clients (197 total)
+
 ## [0.1.1] - 2026-03-24
 
 ### Added

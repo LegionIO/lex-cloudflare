@@ -13,6 +13,8 @@ require_relative 'cloudflare/ai_gateway'
 require_relative 'cloudflare/ai'
 require_relative 'cloudflare/zones'
 require_relative 'cloudflare/accounts'
+require_relative 'cloudflare/workers_routes'
+require_relative 'cloudflare/pages'
 
 module Legion
   module Extensions

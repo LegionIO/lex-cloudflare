@@ -44,4 +44,12 @@ RSpec.describe Legion::Extensions::Cloudflare do
   it 'defines the Accounts sub-module' do
     expect(described_class.const_defined?(:Accounts)).to be true
   end
+
+  it 'defines the WorkersRoutes sub-module' do
+    expect(described_class.const_defined?(:WorkersRoutes)).to be true
+  end
+
+  it 'defines the Pages sub-module' do
+    expect(described_class.const_defined?(:Pages)).to be true
+  end
 end

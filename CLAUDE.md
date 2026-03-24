@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Monolith Legion Extension connecting LegionIO to Cloudflare services. Implements 10 sub-modules covering DNS, network security, Zero Trust, SSL, Vectorize, AI, Zones, and Accounts via the Cloudflare REST API v4.
+Monolith Legion Extension connecting LegionIO to Cloudflare services. Implements 12 sub-modules covering DNS, network security, Zero Trust, SSL, Vectorize, AI, Zones, Accounts, Workers Routes, and Pages via the Cloudflare REST API v4.
 
 **GitHub**: https://github.com/LegionIO/lex-cloudflare
 **License**: MIT
@@ -63,11 +63,19 @@ Legion::Extensions::Cloudflare
 │   ├── Runners::Zones            # Zone CRUD, activation check
 │   ├── Runners::Settings         # Zone settings list/get
 │   └── Client
-└── Accounts/                     # Account and IAM management
-    ├── Runners::Accounts         # Account CRUD, profile
-    ├── Runners::Members          # Member invite/update/remove
-    ├── Runners::Roles            # Role list/get
-    ├── Runners::Tokens           # API token CRUD
+├── Accounts/                     # Account and IAM management
+│   ├── Runners::Accounts         # Account CRUD, profile
+│   ├── Runners::Members          # Member invite/update/remove
+│   ├── Runners::Roles            # Role list/get
+│   ├── Runners::Tokens           # API token CRUD
+│   └── Client
+├── WorkersRoutes/                # Zone-scoped Workers route management
+│   ├── Runners::Routes           # Route CRUD (pattern + script binding)
+│   └── Client
+└── Pages/                        # Account-scoped Cloudflare Pages
+    ├── Runners::Projects         # Project CRUD
+    ├── Runners::Deployments      # Deployment list/get/delete/retry/rollback
+    ├── Runners::Domains          # Custom domain list/get/add/delete
     └── Client
 ```
 
@@ -92,8 +100,8 @@ Base URL: `https://api.cloudflare.com/client/v4`
 
 | Scope | Sub-modules | Path pattern |
 |-------|-------------|--------------|
-| Zone | Dns, Ssl, Zones | `/zones/{zone_id}/...` |
-| Account | DnsFirewall, CustomNameservers, ZeroTrust, Vectorize, AiGateway, Ai, Accounts | `/accounts/{account_id}/...` |
+| Zone | Dns, Ssl, Zones, WorkersRoutes | `/zones/{zone_id}/...` |
+| Account | DnsFirewall, CustomNameservers, ZeroTrust, Vectorize, AiGateway, Ai, Accounts, Pages | `/accounts/{account_id}/...` |
 | Top-level | Zones (list/create), Accounts (list/create) | `/zones`, `/accounts` |
 
 ## API Coverage
@@ -110,6 +118,8 @@ Base URL: `https://api.cloudflare.com/client/v4`
 | Ai | Models, Finetunes | `run`, `search_models`, `model_schema`, `to_markdown`, `list_finetunes`, `create_finetune` |
 | Zones | Zones, Settings | `list`, `get`, `create`, `update`, `delete`, `activation_check`, `list_settings`, `get_setting` |
 | Accounts | Accounts, Members, Roles, Tokens | `list`, `get`, `create`, `update`, `delete`, `get_profile`, `list_members`, `add_member`, `list_roles`, `list_tokens`, `create_token` |
+| WorkersRoutes | Routes | `list_routes`, `get_route`, `create_route`, `update_route`, `delete_route` |
+| Pages | Projects, Deployments, Domains | `list_projects`, `get_project`, `create_project`, `list_deployments`, `retry_deployment`, `rollback_deployment`, `list_domains`, `add_domain` |
 
 ## Dependencies
 
@@ -119,7 +129,7 @@ Base URL: `https://api.cloudflare.com/client/v4`
 
 ## Development
 
-165 specs total (0 failures).
+197 specs total (0 failures).
 
 ```bash
 bundle install
