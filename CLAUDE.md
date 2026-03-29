@@ -10,7 +10,7 @@ Monolith Legion Extension connecting LegionIO to Cloudflare services. Implements
 
 **GitHub**: https://github.com/LegionIO/lex-cloudflare
 **License**: MIT
-**Version**: 0.1.0
+**Version**: 0.1.2
 
 ## Architecture
 
